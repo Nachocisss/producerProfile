@@ -1,36 +1,23 @@
 import "./App.css";
 import Footer from "./screens/Footer/Footer.tsx";
 import Header from "./screens/Header/Header.tsx";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Home from "./screens/Home/Home.tsx";
-import About from "./screens/About/About.tsx";
-import Portafolio from "./screens/Portafolio/Portafolio.tsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./screens/Content/Home/Home.tsx";
+import About from "./screens/Content/About/About.tsx";
+import Portafolio from "./screens/Content/Portafolio/Portafolio.tsx";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Router>
-        <div className="app">
-          <nav className="navbar">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-            <Link to="/Portafolio" className="nav-link">
-              Portafolio
-            </Link>
-          </nav>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/Portafolio" component={Portafolio} />
-          </Switch>
-        </div>
-      </Router>
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Portafolio" element={<Portafolio />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

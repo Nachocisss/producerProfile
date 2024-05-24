@@ -1,5 +1,6 @@
 .headerContainer {
   display: flex;
+  flex-direction: column;
   height: 200px;
   background: linear-gradient(90deg, #221e1c, #3c3936);
   justify-content: center;
@@ -9,4 +10,11 @@ h1 {
   font-size: 48px;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.linksContainer {
+  display: flex;
+  gap: 32px;
+}
+.routeLink {
+  color: white;
 }
