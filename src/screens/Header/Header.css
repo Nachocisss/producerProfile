@@ -1,0 +1,12 @@
+.headerContainer {
+  display: flex;
+  height: 200px;
+  background: linear-gradient(90deg, #221e1c, #3c3936);
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 48px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
