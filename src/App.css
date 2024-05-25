@@ -1,4 +1,8 @@
 .App {
-  text-align: center;
-  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body {
+  background-color: #221e1c;
 }
